@@ -1,7 +1,14 @@
 [package]
 name = "vivinq"
-version = "0.1.0"
+author = "Sébastien LUNDI"
+description = "A rust library to query the Vivino service"
+version = "1.0.0"
 edition = "2021"
+readme = "README.md"
+repository = "https://github.com/slundi/vivinq"
+license = "MIT/Apache-2.0"
+keywords = ["api", "wine", "vivino"]
+categories = ["api-bindings"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
