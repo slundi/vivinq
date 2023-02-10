@@ -2,7 +2,7 @@
 name = "vivinq"
 author = "Sébastien LUNDI"
 description = "A rust library to query the Vivino service"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 readme = "README.md"
 repository = "https://github.com/slundi/vivinq"
@@ -13,4 +13,6 @@ categories = ["api-bindings"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ureq = { version = "2.4.0", features = ["json", "charset", "brotli"] }
+
+[dev-dependencies]
+ureq = { version = "2.6", features = ["json", "charset", "brotli"] }

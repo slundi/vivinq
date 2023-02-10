@@ -2,24 +2,27 @@
 
 This project is based on the python project [Viviner](https://github.com/gugarosa/viviner/).
 
-It uses the [ureq](https://github.com/algesten/ureq) blocking HTTP client. If you want asynchronous jobs you are free to choose your own.
+It prepare an URL to query the Vivinio API. You are free to use any HTTP client to perform requests.
 
 ## Usage
 
 ```rust
 fn main() {
     //get all wines from France and United States
-    let pl = vivinq::Payload{country_codes:Some(vec!["fr","us"]), min_rating:4.2, ..Default::default()};
-    let resp = vivinq::get(&pl); //returns a Result<ureq::Response, ureq::Error>
+    let pl = vivinq::Payload{country_codes:Some(vec![String::from("fr"), String::from("us")]), min_rating:4.2, ..Default::default()};
+    let url: String = vivinq::get_url(&pl);
+    // perform your request
 }
 ```
+
+It seems, you don't need to specify a USER_AGENT in your HTTP request, you can send an empty string `User-Agent: `.
 
 The Payload is defined in lib.rs and parameters are optionals:
 
 ```rust
-pub struct Payload<'a> {
+pub struct Payload {
     /// "country_codes[]": "br","fr","us","de", ...
-    pub country_codes: Option<Vec<&'a str>>,
+    pub country_codes: Option<Vec<String>,
     /// "food_ids[]": 20,
     pub food_ids: Option<Vec<u16>>,
     /// "grape_ids[]": 3,
