@@ -1,5 +1,7 @@
 use serde::Deserialize;
 
+use super::image::Image;
+
 /// ```json
 /// "vintage": {
 ///     "id": 14780847,
@@ -114,5 +116,5 @@ use serde::Deserialize;
 /// ```
 #[derive(Debug, Eq, PartialEq, Deserialize)]
 pub struct Vintage {
-
+    image: Image,
 }

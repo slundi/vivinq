@@ -1,6 +1,7 @@
 pub mod country;
 pub mod activity;
 pub mod currency;
+pub mod image;
 pub mod grape;
 pub mod region;
 pub mod review;

@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-use super::region::Region;
+use super::{region::Region, image::Image};
 
 /// "region": {
 ///     "id": 2448,
@@ -70,4 +70,5 @@ pub struct Wine {
     vintage_type: u8,
     is_natural: bool,
     region: Region,
+    background_image: Option<Image>,
 }
