@@ -48,3 +48,7 @@ pub struct Payload {
     pub wine_type_ids: Option<u16>,
 }
 ```
+
+## Features
+
+`serde` (enabled by default). It allows you to deserialize Vivino JSON using serde.

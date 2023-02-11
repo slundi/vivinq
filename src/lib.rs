@@ -1,3 +1,4 @@
+#[cfg(feature = "serde_json")]
 pub mod model;
 
 const BASE_URL: &str = "https://www.vivino.com/api/explore?";
