@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-use super::country::Country;
+use super::{country::Country, image::Image};
 
 #[derive(Debug, Eq, PartialEq, Deserialize)]
 pub struct Region {
@@ -9,7 +9,7 @@ pub struct Region {
     seo_name: String,
     country: Country,
     parent_id: u32,
-    background_image: Option<String>,
+    background_image: Option<Image>,
     //class: Class,
     statistics: RegionStatistics,
 }

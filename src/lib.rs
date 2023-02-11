@@ -135,7 +135,7 @@ mod tests {
     const USER_AGENT: &str = "";
 
     #[test]
-    fn it_works() {
+    fn test_call_explore() {
         let agent: Agent = ureq::AgentBuilder::new()
             .timeout_read(Duration::from_secs(120))
             .timeout_write(Duration::from_secs(10))

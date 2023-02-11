@@ -63,12 +63,12 @@ use super::{region::Region, image::Image};
 /// },
 #[derive(Debug, Eq, PartialEq, Deserialize)]
 pub struct Wine {
-    id: u32,
-    name: String,
-    seo_name: String,
-    type_id: u8,
-    vintage_type: u8,
-    is_natural: bool,
-    region: Region,
-    background_image: Option<Image>,
+    pub id: u32,
+    pub name: String,
+    pub seo_name: String,
+    pub type_id: u8,
+    pub vintage_type: u8,
+    pub is_natural: bool,
+    pub region: Region,
+    pub background_image: Option<Image>,
 }

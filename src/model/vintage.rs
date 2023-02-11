@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-use super::image::Image;
+use super::{grape::Grape, image::Image, wine::Wine};
 
 /// ```json
 /// "vintage": {
@@ -112,9 +112,38 @@ use super::image::Image;
 ///     "year": 2013,
 ///     "grapes": null,
 ///     "has_valid_ratings": true
-///             }
+/// }
 /// ```
-#[derive(Debug, Eq, PartialEq, Deserialize)]
+#[derive(Debug, PartialEq, Deserialize)]
 pub struct Vintage {
-    image: Image,
+    pub id: u32,
+    pub name: String,
+    pub seo_name: String,
+    pub statistics: VintageStatistics,
+    pub image: Image,
+    //not sure
+    pub organic_certification_id: Option<String>,
+    pub certified_biodynamic: Option<String>,
+    pub wine: Wine,
+    pub year: u16,
+    pub grapes: Option<Vec<Grape>>,
+    pub has_valid_ratings: bool,
+}
+
+/// Sample JSON:
+/// ```json
+/// {
+///     "status": "Normal",
+///     "ratings_count": 25,
+///     "ratings_average": 4.1,
+///     "labels_count": 166,
+///     "reviews_count": 13
+/// }
+/// ```
+#[derive(Debug, PartialEq, Deserialize)]
+pub struct VintageStatistics {
+    pub status: String,
+    pub ratings_count: u32,
+    pub ratings_average: f32,
+    pub reviews_count: u32,
 }
