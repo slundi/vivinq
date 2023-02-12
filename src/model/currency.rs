@@ -13,7 +13,7 @@ mod tests {
     use serde_json;
 
     #[test]
-    fn test_deserialize_activity() {
+    fn test_deserialize_currency() {
         let json =
             "{ \"code\": \"EUR\", \"name\": \"Euros\", \"prefix\": \"€\", \"suffix\": null }";
         let c: crate::model::currency::Currency = serde_json::from_str(json).unwrap();

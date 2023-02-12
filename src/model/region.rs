@@ -28,7 +28,7 @@ mod tests {
     use serde_json;
 
     #[test]
-    fn test_deserialize_activity() {
+    fn test_deserialize_region() {
         let json = "{
             \"id\": 2448,
             \"name\": \"Côtes du Roussillon Villages\",

@@ -14,7 +14,7 @@ mod tests {
     use serde_json;
 
     #[test]
-    fn test_deserialize_activity() {
+    fn test_deserialize_grape() {
         let json = "{
                 \"id\": 14,
                 \"name\": \"Pinot Noir\",
