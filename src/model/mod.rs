@@ -5,6 +5,7 @@ pub mod image;
 pub mod grape;
 pub mod region;
 pub mod review;
+pub mod user;
 pub mod vintage;
 pub mod wine;
 pub mod winery;
