@@ -321,6 +321,6 @@ use serde::Deserialize;
 #[derive(Debug, Eq, PartialEq, Deserialize)]
 pub struct Review {
     /// Vivino ID
-    id: u32,
-    tagged_note: String,
+    pub id: u32,
+    pub tagged_note: String,
 }

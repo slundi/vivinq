@@ -1,22 +1,22 @@
 use serde::Deserialize;
 
 #[derive(Debug, PartialEq, Deserialize)]
-struct Winery {
+pub struct Winery {
     /// Vivino ID
-    id: u32,
-    name: String,
-    seo_name: String,
-    status: u8,
-    review_status: String,
-    background_image: Option<String>,
-    statistics: WineryStatistics,
+    pub id: u32,
+    pub name: String,
+    pub seo_name: String,
+    pub status: u8,
+    pub review_status: String,
+    pub background_image: Option<String>,
+    pub statistics: WineryStatistics,
 }
 #[derive(Debug, PartialEq, Deserialize)]
-struct WineryStatistics {
-    ratings_count: u32,
-    ratings_average: f32,
-    labels_count: u32,
-    wines_count: u32,
+pub struct WineryStatistics {
+    pub ratings_count: u32,
+    pub ratings_average: f32,
+    pub labels_count: u32,
+    pub wines_count: u32,
 }
 
 #[cfg(test)]
